@@ -13,4 +13,4 @@ COPY . /app
 RUN pip install -r requirements.txt
 
 # Command to run your application
-CMD ["python", "your_script.py"]
+CMD ["python", "ppsx_to_pdf.py"]
