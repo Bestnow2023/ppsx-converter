@@ -3,6 +3,7 @@ import os
 import subprocess
 import tempfile
 import uuid
+from waitress import serve
 
 app = Flask(__name__)
 
@@ -53,4 +54,4 @@ def convert():
             return jsonify({"message": f"Error in cleanup: {str(e)}"}), 500
 
 if __name__ == '__main__':
-    app.run()
+    serve(app, host="0.0.0.0", port=8080)
